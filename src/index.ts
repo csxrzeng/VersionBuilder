@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import fs = require('fs');
 import cli = require('cli');
 import path = require('path');

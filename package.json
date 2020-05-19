@@ -1,11 +1,14 @@
 {
   "name": "versionbuilder",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "build version string for files",
   "main": "index.js",
   "scripts": {
     "test": "tsc && node bin/index.js ."
   },
+  "files": [
+    "bin"
+  ],
   "bin": {
     "versionbuilder": "bin/index.js"
   },
