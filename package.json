@@ -1,12 +1,18 @@
 {
   "name": "versionbuilder",
-  "version": "1.0.0",
-  "description": "build version json for files",
+  "version": "1.0.1",
+  "description": "build version string for files",
   "main": "index.js",
   "scripts": {
     "test": "tsc && node bin/index.js ."
   },
-  "author": "csxrzeng",
+  "bin": {
+    "versionbuilder": "bin/index.js"
+  },
+  "repository": {
+    "url": "https://github.com/csxrzeng/VersionBuilder"
+  },
+  "author": "ryantech",
   "license": "MIT",
   "dependencies": {
     "@types/cli": "^0.11.19",
