@@ -1,6 +1,6 @@
 {
   "name": "versionbuilder",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "build version string for files",
   "main": "index.js",
   "scripts": {

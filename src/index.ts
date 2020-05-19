@@ -43,7 +43,7 @@ async function build2Json(dir: string) {
     let json = {};
     await fileDisplay(dir, async (file: string) => {
         let filename = file.replace(/\\/g, '/'); // 相对路径，斜杠风格
-        if (filename.startsWith(dir)) filename = filename.slice(dir.length);
+        if (filename.startsWith(dir)) filename = filename.slice(dir.length + 1);
         json[filename] = await hashFile(file);
         console.log(filename, json[filename]);
     });
@@ -55,7 +55,8 @@ async function build2Txt(dir: string) {
     output = path.join(dir, 'version.txt');
     let arr = [];
     await fileDisplay(dir, async (file: string) => {
-        let filename = file.replace(dir, '').replace(/\\/g, '/'); // 相对路径，斜杠风格
+        let filename = file.replace(/\\/g, '/'); // 相对路径，斜杠风格
+        if (filename.startsWith(dir)) filename = filename.slice(dir.length + 1);
         arr.push(filename + ":" + await hashFile(file));
     });
     console.log('done');
